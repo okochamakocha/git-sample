@@ -19,12 +19,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor redColor];
+     self.view.backgroundColor = [UIColor redColor];
     
      [UIView beginAnimations:@"animation" context:Nil];
      [UIView setAnimationDuration:3.0];
      [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-     self.view.backgroundColor = [UIColor yellowColor];
+     self.view.backgroundColor = [UIColor greenColor]; //changed
      [UIView commitAnimations];
 }
 
@@ -32,6 +32,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [UIView beginAnimations:@"animation" context:nil];
+    [UIView setAnimationDuration:3.0];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    self.view.backgroundColor = [UIColor purpleColor];
+    [UIView commitAnimations];
 }
 
 @end
